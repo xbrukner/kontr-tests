@@ -135,7 +135,7 @@ public:
      * @brief result
      * @return
      */
-    virtual Variable result() { return ""; }
+    virtual Variable result() override { return ""; }
 };
 
 template<typename T>

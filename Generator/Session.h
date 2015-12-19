@@ -43,7 +43,7 @@ public:
         }
     }
 
-    virtual void pre_test() {
+    virtual void pre_test() override {
         using Variable = const typename ::kontr::Variable::Delegator<T>&;
         auto &s = T::instance().storage; //::kontr::Generator::Storage
         s.names.currentMasterIndex = 0;
@@ -83,7 +83,7 @@ public:
         out << "}" << std::endl;
     }
 
-    virtual void post_test() {
+    virtual void post_test() override {
         out << "sub post_test {" << std::endl;
         T::instance().storage.out_ptr = &out;
         if (post != nullptr) {

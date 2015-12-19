@@ -34,7 +34,6 @@ TEST_CASE("Constants type deduction") {
 
     testType (Type::Float, 4.3);
     testType (Type::Float, 4.3f);
-    testType (Type::Float, 4.3d);
 
     testType (Type::Bool, false);
     testType (Type::Bool, true);

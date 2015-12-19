@@ -38,28 +38,28 @@ public:
         T::instance().storage.out_ptr = &out;
     }
 
-    virtual void name(const char* name) {
+    virtual void name(const char* name) override {
         Variable print = name;
         std::string& indent = T::instance().storage.indent;
         out << indent << variable << "->name(" << print << ");" << std::endl;
     }
 
-    virtual void stage_file(Variable filename) {
+    virtual void stage_file(Variable filename) override {
         std::string& indent = T::instance().storage.indent;
         out << indent << variable << "->stage_file(" << filename << ");" << std::endl;
     }
 
-    virtual void stage_compiled_file(Variable filename) {
+    virtual void stage_compiled_file(Variable filename) override {
         std::string& indent = T::instance().storage.indent;
         out << indent << variable << "->stage_compiled_file(" << filename << ");" << std::endl;
     }
 
-    virtual void stage_student_file(Variable filename) {
+    virtual void stage_student_file(Variable filename) override {
         std::string& indent = T::instance().storage.indent;
         out << indent << variable << "->stage_student_file(" << filename << ");" << std::endl;
     }
 
-    virtual void stage_compiled_student_file(Variable filename) {
+    virtual void stage_compiled_student_file(Variable filename) override {
         std::string& indent = T::instance().storage.indent;
         out << indent << variable << "->stage_compiled_student_file(" << filename << ");" << std::endl;
     }
@@ -81,7 +81,7 @@ public:
     GETTER(file_path, String)
 
     virtual Compilation* compilation() override { return &compilationResult; }
-    virtual void extra_compiler_flags(Variable flags) {
+    virtual void extra_compiler_flags(Variable flags) override {
         std::string& indent = T::instance().storage.indent;
         out << indent << variable << "->extra_compiler_flags(" << flags << ");" << std::endl;
     }

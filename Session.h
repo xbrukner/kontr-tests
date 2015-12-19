@@ -218,19 +218,19 @@ public:
         return className;
     }
 
-    virtual void pre_test() {
+    virtual void pre_test() override {
         delegate.pre_test();
     }
 
-    virtual void post_test() {
+    virtual void post_test() override {
         delegate.post_test();
     }
 
-    virtual const std::string& __getScriptsDir() const {
+    virtual const std::string& __getScriptsDir() const override {
         return delegate.__getScriptsDir();
     }
 
-    virtual const std::string& __getFilesDir() const {
+    virtual const std::string& __getFilesDir() const override {
         return delegate.__getFilesDir();
     }
 

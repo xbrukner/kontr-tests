@@ -166,23 +166,23 @@ public:
     using typename Interface<T>::Compilation;
     using typename Interface<T>::Valgrind;
 
-    virtual void name(const char* name) {
+    virtual void name(const char* name) override {
         delegate.name(name);
     }
 
-    virtual void stage_file(Variable filename) {
+    virtual void stage_file(Variable filename) override {
         delegate.stage_file(filename);
     }
 
-    virtual void stage_compiled_file(Variable filename) {
+    virtual void stage_compiled_file(Variable filename) override {
         delegate.stage_compiled_file(filename);
     }
 
-    virtual void stage_student_file(Variable filename) {
+    virtual void stage_student_file(Variable filename) override {
         delegate.stage_student_file(filename);
     }
 
-    virtual void stage_compiled_student_file(Variable filename) {
+    virtual void stage_compiled_student_file(Variable filename) override {
         delegate.stage_compiled_student_file(filename);
     }
 

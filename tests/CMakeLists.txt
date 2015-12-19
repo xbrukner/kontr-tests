@@ -1,3 +1,4 @@
+cmake_minimum_required(VERSION 3.0)
 include_directories("../")
 
 if(NOT EXISTS ${CMAKE_CURRENT_LIST_DIR}/bin)

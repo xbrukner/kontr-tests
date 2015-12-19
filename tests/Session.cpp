@@ -18,7 +18,7 @@ MASTER_TEST(naostro) {
 SESSION_NAME(both, ".", "files", {nanecisto}, {naostro}, false, false)
 
 TEST_CASE("master_test") {
-    array<const char*, 3> filenames = {"./session.pl", "./nanecisto.pl", "./naostro.pl"};
+    array<const char*, 3> filenames = {{"./session.pl", "./nanecisto.pl", "./naostro.pl"}}; //-Wmissing-braces
     Testing &cg = Testing::instance();
     cg.storage.names = kontr::Names::getAll(both, cg);
     cg.storage.nextFileName = cg.storage.names.session.c_str();

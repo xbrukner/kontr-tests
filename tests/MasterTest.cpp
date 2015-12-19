@@ -137,8 +137,8 @@ TEST_CASE("master_test") {
         ifstream generated(filename);
         REQUIRE(generated.good());
 
-        //Check unit tests existance
-        array<const char*, 3> unit_filenames = {"unit_matrix_test2.pl", "unit_matrix_test3.pl", "unit_parser_test2.pl"};
+        //Check unit tests existence
+        array<const char*, 3> unit_filenames = {{"unit_matrix_test2.pl", "unit_matrix_test3.pl", "unit_parser_test2.pl"}}; //-Wmissing-braces
         ifstream unit1(unit_filenames[0]), unit2(unit_filenames[1]), unit3(unit_filenames[2]);
         CHECK(unit1.good());
         CHECK(unit2.good());
